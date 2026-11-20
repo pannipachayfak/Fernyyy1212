@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>วิธีการใช้งาน | My Secretary</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #10182d, #29245c);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+}
+
+.logo {
+    color: #b5a5ff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+h1 span {
+    color: #a99bff;
+}
+
+.subtitle {
+    color: #c9c9d8;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.15);
+}
+
+.number {
+    color: #a99bff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.card h2 {
+    margin: 15px 0;
+    color: #c3b7ff;
+    font-size: 21px;
+}
+
+.card p {
+    color: #d0d0dc;
+    line-height: 1.7;
+}
+
+.start-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 35px;
+    background: #7569e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: #978aff;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #999bb5;
+}
+
+@media(max-width:600px) {
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✦ MY SECRETARY</div>
+
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="how-to-use.html">วิธีใช้งาน</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h1>วิธีการใช้งาน <span>AI Secretary</span></h1>
+
+    <p class="subtitle">
+        เรียนรู้วิธีใช้งานเทคโนโลยีเลขานุการส่วนตัว
+        <br>
+        เพื่อช่วยจัดการชีวิตประจำวันของคุณให้ง่ายยิ่งขึ้น
+    </p>
+
+    <div class="steps">
+
+        <div class="card">
+            <div class="number">01</div>
+            <h2>เข้าสู่ระบบ</h2>
+            <p>
+                เข้าสู่เว็บไซต์และกรอกข้อมูลบัญชีผู้ใช้
+                เพื่อเข้าใช้งานระบบเลขานุการส่วนตัว
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">02</div>
+            <h2>จัดการตารางเวลา</h2>
+            <p>
+                เพิ่มกิจกรรม นัดหมาย และกำหนดวันเวลา
+                เพื่อวางแผนการทำงานในแต่ละวัน
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">03</div>
+            <h2>ตั้งค่าการแจ้งเตือน</h2>
+            <p>
+                ตั้งค่าการแจ้งเตือนล่วงหน้า
+                เพื่อไม่ให้พลาดงานหรือกิจกรรมสำคัญ
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">04</div>
+            <h2>ใช้งาน AI Assistant</h2>
+            <p>
+                พิมพ์คำถามหรือคำสั่งที่ต้องการ
+                เพื่อให้ AI ช่วยวางแผนและจัดการงาน
+            </p>
+        </div>
+
+    </div>
+
+    <a href="dashboard.html" class="start-btn">
+        เริ่มต้นใช้งาน →
+    </a>
+
+</div>
+
+<footer>
+    © 2026 MY SECRETARY | AI PERSONAL ASSISTANT
+</footer>
+
+</body>
+</html>
