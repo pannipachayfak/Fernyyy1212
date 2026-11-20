@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>วิธีการใช้งาน | My Secretary</title>
+
+<title>วิธีการใช้งาน | MY SECRETARY</title>
 
 <style>
 * {
@@ -15,11 +16,12 @@
 }
 
 body {
+    min-height: 100vh;
     background: linear-gradient(135deg, #10182d, #29245c);
     color: white;
-    min-height: 100vh;
 }
 
+/* Navbar */
 header {
     padding: 22px 8%;
     display: flex;
@@ -29,9 +31,9 @@ header {
 }
 
 .logo {
-    color: #b5a5ff;
     font-size: 22px;
     font-weight: bold;
+    color: #b5a5ff;
 }
 
 nav a {
@@ -40,16 +42,28 @@ nav a {
     margin-left: 20px;
 }
 
+/* Main */
 .container {
-    max-width: 900px;
+    max-width: 850px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 55px 20px;
     text-align: center;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 18px;
+    background: rgba(117,105,232,0.2);
+    color: #b5a5ff;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 h1 {
     font-size: 38px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 h1 span {
@@ -57,51 +71,64 @@ h1 span {
 }
 
 .subtitle {
-    color: #c9c9d8;
+    color: #cbd1e2;
     line-height: 1.8;
     margin-bottom: 40px;
 }
 
+/* Steps */
 .steps {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 18px;
 }
 
-.card {
-    background: rgba(255,255,255,0.08);
-    padding: 28px;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 18px;
+.step-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 24px;
     text-align: left;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.step-card:hover {
+    transform: translateY(-4px);
     background: rgba(255,255,255,0.15);
 }
 
 .number {
-    color: #a99bff;
     font-size: 28px;
     font-weight: bold;
+    color: #a99bff;
 }
 
-.card h2 {
-    margin: 15px 0;
-    color: #c3b7ff;
-    font-size: 21px;
+.icon {
+    font-size: 27px;
+    background: #51468c;
+    padding: 14px;
+    border-radius: 12px;
 }
 
-.card p {
-    color: #d0d0dc;
+.step-content h2 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.step-content p {
+    color: #c3c9db;
+    font-size: 14px;
     line-height: 1.7;
 }
 
+/* Button */
 .start-btn {
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 35px;
     padding: 15px 35px;
     background: #7569e8;
     color: white;
@@ -112,26 +139,29 @@ h1 span {
 
 .start-btn:hover {
     background: #978aff;
+    transform: scale(1.05);
 }
 
 footer {
     text-align: center;
     padding: 25px;
-    color: #999bb5;
+    color: #9ba5c0;
+    font-size: 13px;
 }
 
 @media(max-width:600px) {
-    .steps {
-        grid-template-columns: 1fr;
-    }
-
     h1 {
-        font-size: 30px;
+        font-size: 29px;
     }
 
-    header {
-        flex-direction: column;
-        gap: 15px;
+    .step-card {
+        padding: 18px 12px;
+        gap: 12px;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 13px;
     }
 }
 </style>
@@ -144,68 +174,86 @@ footer {
 
     <nav>
         <a href="index.html">หน้าหลัก</a>
-        <a href="how-to-use.html">วิธีใช้งาน</a>
+        <a href="dashboard.html">Dashboard</a>
     </nav>
 </header>
 
 <div class="container">
 
-    <h1>วิธีการใช้งาน <span>AI Secretary</span></h1>
+    <div class="tag">YOUR PERSONAL AI ASSISTANT</div>
+
+    <h1>วิธีการใช้งาน</h1>
+
+    <h1><span>AI Personal Secretary</span></h1>
 
     <p class="subtitle">
-        เรียนรู้วิธีใช้งานเทคโนโลยีเลขานุการส่วนตัว
+        เรียนรู้การใช้งานผู้ช่วยส่วนตัวอัจฉริยะใน 4 ขั้นตอน
         <br>
-        เพื่อช่วยจัดการชีวิตประจำวันของคุณให้ง่ายยิ่งขึ้น
+        เพื่อให้การจัดการชีวิตประจำวันของคุณง่ายขึ้น
     </p>
 
     <div class="steps">
 
-        <div class="card">
+        <div class="step-card">
             <div class="number">01</div>
-            <h2>เข้าสู่ระบบ</h2>
-            <p>
-                เข้าสู่เว็บไซต์และกรอกข้อมูลบัญชีผู้ใช้
-                เพื่อเข้าใช้งานระบบเลขานุการส่วนตัว
-            </p>
+            <div class="icon">👤</div>
+            <div class="step-content">
+                <h2>เข้าสู่ระบบ</h2>
+                <p>
+                    เข้าสู่เว็บไซต์และกรอกข้อมูล
+                    เพื่อเริ่มต้นใช้งานเลขานุการส่วนตัว
+                </p>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="step-card">
             <div class="number">02</div>
-            <h2>จัดการตารางเวลา</h2>
-            <p>
-                เพิ่มกิจกรรม นัดหมาย และกำหนดวันเวลา
-                เพื่อวางแผนการทำงานในแต่ละวัน
-            </p>
+            <div class="icon">📅</div>
+            <div class="step-content">
+                <h2>จัดการตารางเวลา</h2>
+                <p>
+                    เพิ่มนัดหมายและกิจกรรมต่าง ๆ
+                    เพื่อวางแผนการทำงานในแต่ละวัน
+                </p>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="step-card">
             <div class="number">03</div>
-            <h2>ตั้งค่าการแจ้งเตือน</h2>
-            <p>
-                ตั้งค่าการแจ้งเตือนล่วงหน้า
-                เพื่อไม่ให้พลาดงานหรือกิจกรรมสำคัญ
-            </p>
+            <div class="icon">🔔</div>
+            <div class="step-content">
+                <h2>ตั้งค่าการแจ้งเตือน</h2>
+                <p>
+                    กำหนดเวลาแจ้งเตือนล่วงหน้า
+                    เพื่อไม่ให้พลาดงานสำคัญ
+                </p>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="step-card">
             <div class="number">04</div>
-            <h2>ใช้งาน AI Assistant</h2>
-            <p>
-                พิมพ์คำถามหรือคำสั่งที่ต้องการ
-                เพื่อให้ AI ช่วยวางแผนและจัดการงาน
-            </p>
+            <div class="icon">🤖</div>
+            <div class="step-content">
+                <h2>พูดคุยกับ AI Assistant</h2>
+                <p>
+                    พิมพ์คำถามหรือคำสั่งที่ต้องการ
+                    เพื่อให้ AI ช่วยวางแผนและจัดการงาน
+                </p>
+            </div>
         </div>
 
     </div>
 
     <a href="dashboard.html" class="start-btn">
-        เริ่มต้นใช้งาน →
+        เริ่มใช้งานเลขานุการส่วนตัว →
     </a>
 
 </div>
 
 <footer>
-    © 2026 MY SECRETARY | AI PERSONAL ASSISTANT
+    MY SECRETARY © 2026
+    <br><br>
+    Powered by Artificial Intelligence
 </footer>
 
 </body>
